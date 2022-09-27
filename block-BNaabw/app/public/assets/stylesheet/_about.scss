@@ -1,0 +1,117 @@
+.about-hero{
+    background-color: $accent;
+    text-align: center;
+    padding: 5rem 0;
+    h2{
+        color: #fff;
+        font-size: 3.2rem;
+    }
+    p{
+        color: #fff;
+        font-size: 1.3rem;
+    }
+}
+.about{
+
+    h6{
+        color: $accent;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 3rem;
+        width: 90%;
+        margin: 0.8rem 0 2rem 0;
+        
+    }
+    p{
+        font-size: 1.4rem;
+        width: 90%;
+    }
+    article {
+        padding: 3rem 0;
+    }
+    @media screen  and (max-width: 768px){
+        & {
+            h2,p{
+            width: 100%;
+            }
+            
+        }
+    }    
+}
+.child-1{
+    text-align: center;
+    img{
+       padding-top: 2rem;
+    }
+}
+.child-2{
+    
+    .fa-solid{
+        font-size: 4.5rem;
+        color: $primary;
+    }
+    h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $primary;
+    }
+    &>div{
+        margin: 3rem 0;
+    }
+    &>div>div:first-child{
+        text-align: center;
+    }
+}
+.about-team{
+    text-align: center;
+    background-color: $contact-bg;
+    h2{
+        font-size: 3.5rem !important;
+    }
+    p{
+        color: #000;
+        font-weight: 500;
+    }
+    .flex{
+        margin-top: 3rem;
+    }
+    .flex-23{
+        padding-bottom: 3rem;
+        background-color: #fff;
+        h3{
+        font-size: 1.8rem !important;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        }
+        p{
+            color: $accent;
+            font-size: 1rem;
+        }
+        @media screen  and (max-width: 768px){
+            margin-bottom: 4rem;
+        }
+    }
+}
+.about-solution{
+    text-align: center;
+    h2{
+        font-size: 3.5rem !important;
+    }
+    p{
+        width: 70%;
+        margin: 2rem auto;
+        @media screen  and (max-width: 768px){
+            width: 100%;
+        }
+    }
+    button{
+        @include button
+    }
+}
+.clients{
+    h2{
+        margin-bottom: 4rem;
+    }
+}

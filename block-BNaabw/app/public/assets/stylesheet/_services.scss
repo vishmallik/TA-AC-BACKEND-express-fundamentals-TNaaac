@@ -1,0 +1,71 @@
+.product{
+    text-align: center;
+    background-color: $banner-middle;
+    hr{
+        border: 1px solid rgba($footer-color,0.2);
+    }
+}
+.product-card{
+    text-align: left;
+    // padding: 5rem 0;
+    img{
+        width:25%;
+        margin-bottom: 1.5rem;
+    }
+    p{
+        font-size: 1.3rem;
+        color: $primary;
+    }
+}
+.product-parent >{
+    div:first-child{
+        padding: 5rem 0;
+    }
+    div:last-child{
+        padding-top: 5rem ;
+    }
+}
+.deals{
+    background-color: $accent;
+    padding: 2rem 0;
+    
+    @media screen and (max-width:768px) {
+        text-align: center;
+        justify-content: center;
+        &>div h4{
+            border-right: 0;
+            margin-bottom: 1rem;
+            }
+            
+        }
+    
+    h4{
+        font-size: 1.6rem;
+        color: #fff;
+        border-right: 1px solid #fff;
+        
+    }
+    p{
+        color: #fff;
+        font-size: 1.3rem;
+    }
+    button{
+           @include button;
+           border: 1px solid white;
+    }
+}
+.award{
+    text-align: center;
+    .container>p{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .container > div{
+        padding-top: 7rem;
+        p{
+            font-size: 1.5rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.contact{
+    p{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.price-card{
+    background-color: #fff;
+    border: 1px solid $footer-color;
+    border-radius: 5px;
+    padding: 3rem;
+    margin-top: 5rem;
+    h5{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 4rem;
+        &::before{
+            content: "\0024";
+        }
+    }
+    h4{
+        font-size: 1.4rem;
+        color: $secondary;
+        margin-bottom: 4rem;
+    }
+    h6{
+        font-size: 1.5rem;
+    }
+    li{
+        font-size: 1.3rem;
+        line-height: 2;
+        &::before{
+            content:"\2010 ";
+            margin-right: 5px;
+        }
+    }
+    .accented-btn{
+        background-color: $accent;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.faq{
+    text-align: center;
+    p{
+        font-size: 1.5rem;
+    }
+    & .wrap{
+        margin-top: 8rem;
+    }
+
+}
+.faq-card{
+
+    text-align: left;
+    border: 1px solid $footer-color;
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+
+    h6{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    p{
+        padding: 1.5rem 0;
+    }
+}

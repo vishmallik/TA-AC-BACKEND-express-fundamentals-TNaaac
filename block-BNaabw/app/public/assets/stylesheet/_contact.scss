@@ -1,0 +1,43 @@
+.letusknow{
+    text-align: center;
+    p{
+        font-size: 1.3rem;
+        margin: 0 auto 4rem auto;
+        width: 50%;
+      
+    }
+    &>div{
+        margin-top: 4rem 0!important;
+    }
+}
+.form-control{
+    input{
+        font-size: 1.3rem;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        padding-left: 1rem;
+        border: 1px solid $footer-color;
+        border-radius: 5px;
+    }
+    textarea{
+        @extend input;
+        height:auto;
+        padding-top: 1rem;
+    }
+    button{
+        padding: 1.5rem 2rem;
+        background-color: $accent;
+        a{
+            color: #fff;
+        }
+    }
+    @media screen  and (max-width: 768px){
+        margin-top: 2rem;
+    }
+}
+.contact{
+    p{
+        color: $secondary;
+    }
+}
