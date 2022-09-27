@@ -1,0 +1,994 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a,
+header > div:last-child li span, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Archivo", sans-serif;
+}
+
+a, header > div:last-child li span {
+  text-decoration: none;
+}
+
+.container {
+  width: 76%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-32 {
+  flex: 0 1 32%;
+}
+
+.flex-48 {
+  flex: 0 1 48%;
+}
+
+.flex-10 {
+  flex: 0 1 10%;
+}
+
+.img-container > img {
+  width: 100%;
+}
+
+.flex-22 {
+  flex: 0 1 22%;
+}
+
+.flex-16 {
+  flex: 0 1 16%;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.flex-88 {
+  flex: 0 1 88%;
+}
+
+.flex-40 {
+  flex: 0 1 40%;
+}
+
+.flex-55 {
+  flex: 0 1 55%;
+}
+
+.flex-15 {
+  flex: 0 1 15%;
+}
+
+.flex-80 {
+  flex: 0 1 80%;
+}
+
+.flex-23 {
+  flex: 0 1 23%;
+}
+
+.flex-30 {
+  flex: 0 1 30%;
+}
+
+.flex-71 {
+  flex: 0 1 71%;
+}
+
+.padding {
+  padding: 8rem 0;
+}
+
+.col {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .sm-flex-100 {
+    flex: 0 1 100%;
+  }
+  .sm-flex-48 {
+    flex: 0 1 48%;
+  }
+  .sm-flex-20 {
+    flex: 0 1 20%;
+  }
+  .sm-wrap {
+    flex-wrap: wrap;
+  }
+  .container {
+    width: 90%;
+  }
+  .sm-center {
+    justify-content: center !important;
+  }
+}
+header > div:first-child {
+  background-color: rgb(220, 62, 69);
+}
+header > div:first-child address {
+  padding: 1rem 0;
+}
+header > div:first-child a, header > div:first-child header > div:last-child li span, header > div:last-child li header > div:first-child span {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  header > div:first-child {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+.social-media-links {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  .social-media-links {
+    text-align: center;
+  }
+}
+.social-media-links i {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+header > div:last-child {
+  background-color: rgb(242, 242, 242);
+}
+@media screen and (max-width: 768px) {
+  header > div:last-child {
+    padding: 2rem 0;
+  }
+}
+header > div:last-child nav {
+  flex: 0 1 50%;
+}
+@media screen and (max-width: 768px) {
+  header > div:last-child nav {
+    display: none;
+  }
+}
+header > div:last-child input, header > div:last-child .form-control textarea, .form-control header > div:last-child textarea {
+  display: none;
+}
+header > div:last-child input:checked ~ label, header > div:last-child .form-control textarea:checked ~ label, .form-control header > div:last-child textarea:checked ~ label {
+  position: fixed;
+  right: 16px;
+  background-color: transparent;
+  z-index: 999;
+}
+@media screen and (max-width: 768px) {
+  header > div:last-child input:checked ~ nav, header > div:last-child .form-control textarea:checked ~ nav, .form-control header > div:last-child textarea:checked ~ nav {
+    display: block;
+    position: fixed;
+    background-color: rgba(220, 62, 69, 0.9);
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  header > div:last-child input:checked ~ nav ul, header > div:last-child .form-control textarea:checked ~ nav ul, .form-control header > div:last-child textarea:checked ~ nav ul {
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  header > div:last-child input:checked ~ nav ul a, header > div:last-child .form-control textarea:checked ~ nav ul a, .form-control header > div:last-child textarea:checked ~ nav ul a, header > div:last-child input:checked ~ nav ul li span, header > div:last-child .form-control textarea:checked ~ nav ul li span, .form-control header > div:last-child textarea:checked ~ nav ul li span, header > div:last-child li input:checked ~ nav ul span, header > div:last-child li .form-control textarea:checked ~ nav ul span, .form-control header > div:last-child li textarea:checked ~ nav ul span {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+header > div:last-child label {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgb(220, 62, 69);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  header > div:last-child label {
+    display: inline-block;
+  }
+}
+header > div:last-child a, header > div:last-child li span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgb(27, 30, 36);
+}
+header > div:last-child a span, header > div:last-child li span span {
+  color: rgb(220, 62, 69);
+}
+header > div:last-child li {
+  flex: 0 1 30%;
+  text-align: center;
+}
+header > div:last-child li a, header > div:last-child li span {
+  color: rgb(27, 30, 36);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  width: 100%;
+  display: inline-block;
+}
+header > div:last-child li a:hover, header > div:last-child li span:hover {
+  background-color: rgba(220, 62, 69, 0.9);
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  header > div:last-child li a:hover, header > div:last-child li span:hover {
+    background-color: transparent;
+  }
+}
+header > div:last-child li .fas {
+  padding-left: 0.5rem;
+}
+
+.hero {
+  margin-top: 1rem;
+}
+
+.bg {
+  height: 52rem;
+  background: white url(/assets/media/banner-1.jpg) no-repeat center -100px;
+}
+.bg h1 {
+  font-weight: 900;
+  font-size: 4.5rem;
+  color: rgb(27, 30, 36);
+  width: 50%;
+  padding-top: 14rem;
+}
+.bg p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(27, 30, 36);
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
+}
+.bg button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid rgb(220, 62, 69);
+  border-radius: 9999px;
+  background-color: rgb(220, 62, 69);
+}
+.bg button:hover {
+  background-color: #fff;
+}
+.bg button:hover > a, .bg header > div:last-child li button:hover > span, header > div:last-child li .bg button:hover > span {
+  color: rgba(220, 62, 69, 0.9);
+}
+.bg button a, .bg button header > div:last-child li span, header > div:last-child li .bg button span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+h2, h3 {
+  color: rgb(27, 30, 36);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+p {
+  color: rgb(127, 135, 142);
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.services {
+  text-align: center;
+  margin: 8rem 0;
+}
+
+button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid rgb(220, 62, 69);
+  border-radius: 9999px;
+  background-color: rgb(220, 62, 69);
+  background-color: #fff;
+  margin: 2rem 0;
+}
+button:hover {
+  background-color: #fff;
+}
+button:hover > a, header > div:last-child li button:hover > span {
+  color: rgba(220, 62, 69, 0.9);
+}
+button a, button header > div:last-child li span, header > div:last-child li button span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+button a, button header > div:last-child li span, header > div:last-child li button span {
+  color: rgb(220, 62, 69);
+}
+button:hover {
+  background-color: rgb(220, 62, 69);
+}
+button:hover > a, header > div:last-child li button:hover > span {
+  color: #fff;
+}
+
+.service-card {
+  margin: 7rem 0 1rem 0;
+  padding: 3rem 2rem;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 1rem;
+}
+.service-card p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.service-card .img-container {
+  width: 25%;
+  margin: 0 auto 1rem auto;
+}
+@media screen and (max-width: 768px) {
+  .service-card {
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+.solutions {
+  background-color: rgb(248, 249, 250);
+  text-align: center;
+}
+.solutions h2, .solutions h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.solutions p {
+  width: 70%;
+  margin: 0 auto;
+}
+.solutions button {
+  margin-top: 4rem;
+}
+
+.team {
+  margin: 7rem 0;
+  text-align: center;
+}
+.team h2, .team h3 {
+  margin: 2rem 0;
+}
+.team p {
+  font-size: 1.3rem;
+}
+
+.red-article {
+  background-color: rgb(220, 62, 69);
+  padding: 2rem 0;
+  margin: 6rem 0;
+}
+.red-article h6 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #fff;
+}
+.red-article p {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+.red-article button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid rgb(220, 62, 69);
+  border-radius: 9999px;
+  background-color: rgb(220, 62, 69);
+  border: 2px solid white;
+}
+.red-article button:hover {
+  background-color: #fff;
+}
+.red-article button:hover > a, .red-article header > div:last-child li button:hover > span, header > div:last-child li .red-article button:hover > span {
+  color: rgba(220, 62, 69, 0.9);
+}
+.red-article button a, .red-article button header > div:last-child li span, header > div:last-child li .red-article button span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .red-article {
+    text-align: center;
+  }
+}
+
+.service-quote article:last-child h2, .service-quote article:last-child h3 {
+  width: 70%;
+}
+.service-quote article:last-child p {
+  font-size: 1.3rem;
+  width: 78%;
+  line-height: 1.8;
+}
+
+.clients {
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
+.clients .container {
+  overflow: hidden;
+}
+.clients h2, .clients h3 {
+  font-size: 3.3rem;
+}
+.clients img {
+  filter: grayscale(100%) opacity(30%);
+}
+.clients img:hover {
+  filter: grayscale(0%) opacity(100%);
+}
+.clients .flex {
+  width: 2000px;
+  transform: translateX(-1500px);
+}
+.clients .flex-15 {
+  -webkit-animation-name: autoscroll;
+          animation-name: autoscroll;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@-webkit-keyframes autoscroll {
+  0% {
+    transform: translateX(0px);
+  }
+  12.5% {
+    transform: translateX(200px);
+  }
+  25% {
+    transform: translateX(400px);
+  }
+  37.5% {
+    transform: translateX(600px);
+  }
+  50% {
+    transform: translateX(800px);
+  }
+  62.5% {
+    transform: translateX(1000px);
+  }
+  75% {
+    transform: translateX(1200px);
+  }
+  87.5% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(1600px);
+  }
+}
+
+@keyframes autoscroll {
+  0% {
+    transform: translateX(0px);
+  }
+  12.5% {
+    transform: translateX(200px);
+  }
+  25% {
+    transform: translateX(400px);
+  }
+  37.5% {
+    transform: translateX(600px);
+  }
+  50% {
+    transform: translateX(800px);
+  }
+  62.5% {
+    transform: translateX(1000px);
+  }
+  75% {
+    transform: translateX(1200px);
+  }
+  87.5% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(1600px);
+  }
+}
+footer {
+  background-color: rgb(52, 58, 64);
+  padding: 5rem 0;
+  color: rgb(189, 189, 189);
+}
+footer .fa-solid {
+  margin-right: 0.8rem;
+}
+footer a, footer header > div:last-child li span, header > div:last-child li footer span {
+  color: rgba(189, 189, 189, 0.6);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+footer li, footer address {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+  footer .flex > div {
+    margin-bottom: 3rem;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 3rem;
+}
+
+.drop-down {
+  display: none;
+  position: absolute;
+}
+
+.drop-down-parent:hover > .drop-down {
+  display: block;
+  background-color: rgb(242, 242, 242);
+  width: 10rem;
+}
+.drop-down-parent:hover > .drop-down li {
+  text-align: left;
+}
+.drop-down-parent:hover > .drop-down li a, .drop-down-parent:hover > .drop-down header > div:last-child li span, header > div:last-child .drop-down-parent:hover > .drop-down li span {
+  display: inline-block;
+  padding-left: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .drop-down-parent:hover > .drop-down {
+    background-color: rgb(220, 62, 69);
+    width: 18rem;
+    position: relative;
+    bottom: 150px;
+    left: 0;
+  }
+}
+
+.about-hero {
+  background-color: rgb(220, 62, 69);
+  text-align: center;
+  padding: 5rem 0;
+}
+.about-hero h2, .about-hero h3 {
+  color: #fff;
+  font-size: 3.2rem;
+}
+.about-hero p {
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.about h6 {
+  color: rgb(220, 62, 69);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.about h2, .about h3 {
+  font-size: 3rem;
+  width: 90%;
+  margin: 0.8rem 0 2rem 0;
+}
+.about p {
+  font-size: 1.4rem;
+  width: 90%;
+}
+.about article {
+  padding: 3rem 0;
+}
+@media screen and (max-width: 768px) {
+  .about h2, .about h3, .about p {
+    width: 100%;
+  }
+}
+
+.child-1 {
+  text-align: center;
+}
+.child-1 img {
+  padding-top: 2rem;
+}
+
+.child-2 .fa-solid {
+  font-size: 4.5rem;
+  color: rgb(27, 30, 36);
+}
+.child-2 h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(27, 30, 36);
+}
+.child-2 > div {
+  margin: 3rem 0;
+}
+.child-2 > div > div:first-child {
+  text-align: center;
+}
+
+.about-team {
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
+.about-team h2, .about-team h3 {
+  font-size: 3.5rem !important;
+}
+.about-team p {
+  color: #000;
+  font-weight: 500;
+}
+.about-team .flex {
+  margin-top: 3rem;
+}
+.about-team .flex-23 {
+  padding-bottom: 3rem;
+  background-color: #fff;
+}
+.about-team .flex-23 h3 {
+  font-size: 1.8rem !important;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.about-team .flex-23 p {
+  color: rgb(220, 62, 69);
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .about-team .flex-23 {
+    margin-bottom: 4rem;
+  }
+}
+
+.about-solution {
+  text-align: center;
+}
+.about-solution h2, .about-solution h3 {
+  font-size: 3.5rem !important;
+}
+.about-solution p {
+  width: 70%;
+  margin: 2rem auto;
+}
+@media screen and (max-width: 768px) {
+  .about-solution p {
+    width: 100%;
+  }
+}
+.about-solution button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid rgb(220, 62, 69);
+  border-radius: 9999px;
+  background-color: rgb(220, 62, 69);
+}
+.about-solution button:hover {
+  background-color: #fff;
+}
+.about-solution button:hover > a, .about-solution header > div:last-child li button:hover > span, header > div:last-child li .about-solution button:hover > span {
+  color: rgba(220, 62, 69, 0.9);
+}
+.about-solution button a, .about-solution button header > div:last-child li span, header > div:last-child li .about-solution button span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.clients h2, .clients h3 {
+  margin-bottom: 4rem;
+}
+
+.error {
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
+.error h3 {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+.error address {
+  font-size: 1.3rem !important;
+}
+.error h6 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+.error p {
+  color: rgb(27, 30, 36);
+  font-size: 1.4rem;
+}
+
+.icon-container {
+  background-color: rgb(235, 235, 235);
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  color: rgb(220, 62, 69);
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.product {
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
+.product hr {
+  border: 1px solid rgba(189, 189, 189, 0.2);
+}
+
+.product-card {
+  text-align: left;
+}
+.product-card img {
+  width: 25%;
+  margin-bottom: 1.5rem;
+}
+.product-card p {
+  font-size: 1.3rem;
+  color: rgb(27, 30, 36);
+}
+
+.product-parent > div:first-child {
+  padding: 5rem 0;
+}
+.product-parent > div:last-child {
+  padding-top: 5rem;
+}
+
+.deals {
+  background-color: rgb(220, 62, 69);
+  padding: 2rem 0;
+}
+@media screen and (max-width: 768px) {
+  .deals {
+    text-align: center;
+    justify-content: center;
+  }
+  .deals > div h4 {
+    border-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+.deals h4 {
+  font-size: 1.6rem;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+.deals p {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.deals button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid rgb(220, 62, 69);
+  border-radius: 9999px;
+  background-color: rgb(220, 62, 69);
+  border: 1px solid white;
+}
+.deals button:hover {
+  background-color: #fff;
+}
+.deals button:hover > a, .deals header > div:last-child li button:hover > span, header > div:last-child li .deals button:hover > span {
+  color: rgba(220, 62, 69, 0.9);
+}
+.deals button a, .deals button header > div:last-child li span, header > div:last-child li .deals button span {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.award {
+  text-align: center;
+}
+.award .container > p {
+  width: 65%;
+  margin: 0 auto;
+}
+.award .container > div {
+  padding-top: 7rem;
+}
+.award .container > div p {
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.letusknow {
+  text-align: center;
+}
+.letusknow p {
+  font-size: 1.3rem;
+  margin: 0 auto 4rem auto;
+  width: 50%;
+}
+.letusknow > div {
+  margin-top: 4rem 0 !important;
+}
+
+.form-control input, .form-control textarea {
+  font-size: 1.3rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-left: 1rem;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+}
+.form-control textarea {
+  height: auto;
+  padding-top: 1rem;
+}
+.form-control button {
+  padding: 1.5rem 2rem;
+  background-color: rgb(220, 62, 69);
+}
+.form-control button a, .form-control button header > div:last-child li span, header > div:last-child li .form-control button span {
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .form-control {
+    margin-top: 2rem;
+  }
+}
+
+.contact p {
+  color: rgb(127, 135, 142);
+}
+
+.contact p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.price-card {
+  background-color: #fff;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+.price-card h5 {
+  font-size: 1.8rem;
+}
+.price-card h2, .price-card h3 {
+  font-size: 4rem;
+}
+.price-card h2::before, .price-card h3::before {
+  content: "$";
+}
+.price-card h4 {
+  font-size: 1.4rem;
+  color: rgb(127, 135, 142);
+  margin-bottom: 4rem;
+}
+.price-card h6 {
+  font-size: 1.5rem;
+}
+.price-card li {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+.price-card li::before {
+  content: "‐";
+  margin-right: 5px;
+}
+.price-card .accented-btn {
+  background-color: rgb(220, 62, 69);
+}
+.price-card .accented-btn a, .price-card .accented-btn header > div:last-child li span, header > div:last-child li .price-card .accented-btn span {
+  color: #fff;
+}
+
+.faq {
+  text-align: center;
+}
+.faq p {
+  font-size: 1.5rem;
+}
+.faq .wrap {
+  margin-top: 8rem;
+}
+
+.faq-card {
+  text-align: left;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+.faq-card h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.faq-card p {
+  padding: 1.5rem 0;
+}/*# sourceMappingURL=style.css.map */
