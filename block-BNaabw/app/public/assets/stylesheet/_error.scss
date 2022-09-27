@@ -1,0 +1,31 @@
+.error{
+    text-align: center;
+    background-color: $contact-bg;
+    h3{
+        font-size: 2.8rem;
+        font-weight: 900;
+    }
+    address{
+        font-size: 1.3rem !important;
+    }
+    h6{
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 1rem 0;
+    }
+    p{
+        color: $primary;
+        font-size: 1.4rem;
+    }
+}
+.icon-container{
+    background-color: rgba(235,235,235,255);
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: $accent;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
